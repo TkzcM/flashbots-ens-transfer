@@ -59,7 +59,7 @@ const signedBundle = await flashbotsProvider.signBundle([
   },
 ]);
 const targetBlock = block.number + BLOCKS_IN_THE_FUTURE;
-const bundleReceipt = await flashbotsProvider.sendRawBundle(
+const bundleReceipt = await flashbotsProvider.simulate(
   signedBundle,
   targetBlock
 );
